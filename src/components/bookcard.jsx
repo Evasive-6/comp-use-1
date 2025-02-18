@@ -1,12 +1,13 @@
 import React from 'react';
-import './bookcard.css';  
+import './bookcard.css'; 
 
-const BookCard = ({ title, author, description }) => {
+const BookCard = ({ image, name, genre, author }) => {
   return (
     <div className="book-card">
-      <h2>{title}</h2>
+      <img src={image} alt={name} className="book-image" />
+      <h2>{name}</h2>
       <p><strong>Author:</strong> {author}</p>
-      <p>{description}</p>
+      <p><strong>Genre:</strong> {genre}</p>
     </div>
   );
 };
